@@ -1,0 +1,21 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Exemplo Json PlaceHolder";
+}
+
+<div class="container mt-5">
+    <h1 class="mb-4">Postagens Especiais</h1>
+    <div class="row">
+        @foreach(var Post in Model.Posts){
+            <div class="col-md-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">@Post.Title</h4>
+                        <p class="card-text">@Post.Body</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
